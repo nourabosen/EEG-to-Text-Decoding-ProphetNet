@@ -11,7 +11,7 @@ import json
 from glob import glob
 import time
 from tqdm import tqdm
-from transformers import BartTokenizer, BartForConditionalGeneration, BertTokenizer, BertConfig, BertForSequenceClassification, RobertaTokenizer, RobertaForSequenceClassification
+from transformers import ProphetNetTokenizer, ProphetNetForConditionalGeneration, BertTokenizer, BertConfig, BertForSequenceClassification, RobertaTokenizer, RobertaForSequenceClassification
 from transformers import MBartForConditionalGeneration, MBart50TokenizerFast
 
 from data_raw import ZuCo_dataset
@@ -320,11 +320,12 @@ if __name__ == '__main__':
     print()
 
     """save config"""
+    os.makedirs('./config/decoding_raw/', exist_ok=True)
     with open(f'./config/decoding_raw/{save_name}.json', 'w') as out_config:
         json.dump(args, out_config, indent=4)
 
     if model_name in ['BrainTranslator', 'BrainTranslatorNaive']:
-        tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+        tokenizer = ProphetNetTokenizer.from_pretrained("microsoft/prophetnet-large-uncased")
 
     # train dataset
     train_set = ZuCo_dataset(whole_dataset_dicts, 'train', tokenizer, subject=subject_choice,
@@ -380,8 +381,7 @@ if __name__ == '__main__':
 
     ''' set up model '''
     if model_name == 'BrainTranslator':
-        pretrained = BartForConditionalGeneration.from_pretrained(
-            'facebook/bart-large')
+        pretrained = ProphetNetForConditionalGeneration.from_pretrained("microsoft/prophetnet-large-uncased")
 
         model = BrainTranslator(pretrained, in_feature=1024, decoder_embedding_size=1024,
                                 additional_encoder_nhead=8, additional_encoder_dim_feedforward=4096)

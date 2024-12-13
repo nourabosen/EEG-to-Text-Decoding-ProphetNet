@@ -70,13 +70,13 @@ class BrainTranslator(nn.Module):
     def freeze_pretrained_bart(self):
         for name, param in self.named_parameters():
             param.requires_grad = True
-            if ('bart' in name):
+            if ('prophetnet' in name):
                 param.requires_grad = False
 
     def freeze_pretrained_brain(self):
         for name, param in self.named_parameters():
             param.requires_grad = False
-            if ('bart' in name):
+            if ('prophetnet' in name):
                 param.requires_grad = True
 
     def forward(self, input_embeddings_batch, input_masks_batch, input_masks_invert, target_ids_batch_converted, lenghts_words, word_contents_batch, word_contents_attn_batch, stepone, subject_batch, device, features=False):

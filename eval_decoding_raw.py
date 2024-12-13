@@ -8,7 +8,7 @@ import json
 import matplotlib.pyplot as plt
 from glob import glob
 
-from transformers import BartTokenizer, BartForConditionalGeneration
+from transformers import ProphetNetTokenizer, ProphetNetForConditionalGeneration
 from data_raw import ZuCo_dataset
 from model_decoding_raw import BrainTranslator
 from nltk.translate.bleu_score import corpus_bleu
@@ -259,7 +259,7 @@ if __name__ == '__main__':
             whole_dataset_dicts.append(pickle.load(handle))
     print()
     
-    tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+    tokenizer = ProphetNetTokenizer.from_pretrained("microsoft/prophetnet-large-uncased")
 
     # test dataset
     test_set = ZuCo_dataset(whole_dataset_dicts, 'test', tokenizer, subject = subject_choice, eeg_type = eeg_type_choice, bands = bands_choice, setting = dataset_setting, raweeg=True)
@@ -296,7 +296,7 @@ if __name__ == '__main__':
 
     ''' set up model '''
     checkpoint_path = args['checkpoint_path']
-    pretrained_bart = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
+    pretrained_bart = ProphetNetForConditionalGeneration.from_pretrained("microsoft/prophetnet-large-uncased")
     
     if model_name == 'BrainTranslator':
         model = BrainTranslator(pretrained_bart, in_feature=1024, decoder_embedding_size=1024,

@@ -5,7 +5,7 @@ from torch.utils.data import Dataset
 import json
 import matplotlib.pyplot as plt
 from glob import glob
-from transformers import BartTokenizer, BertTokenizer
+from transformers import ProphetNetTokenizer, BertTokenizer
 from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence, pad_packed_sequence
 
 
@@ -319,7 +319,7 @@ if __name__ == '__main__':
             print(f'task2_v2, sentence num in {key}:',len(whole_dataset_dicts[0][key]))
         print()
 
-        tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+        tokenizer = ProphetNetTokenizer.from_pretrained("microsoft/prophetnet-large-uncased")
         dataset_setting = 'unique_sent'
         subject_choice = 'ALL'
         print(f'![Debug]using {subject_choice}')
