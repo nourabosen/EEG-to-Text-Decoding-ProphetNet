@@ -47,7 +47,7 @@ def eval_model(dataloaders, device, tokenizer, criterion, model, output_all_resu
     # modified from: https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
 
     gpt=False
-
+    os.makedirs(os.path.dirname(output_all_results_path), exist_ok=True)
     print("Saving to: ", output_all_results_path)
     model.eval()   # Set model to evaluate mode
     running_loss = 0.0

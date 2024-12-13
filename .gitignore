@@ -1,0 +1,8 @@
+__pycache__/
+events.out.tfevents.*
+checkpoints/
+config/
+results_raw/
+**/ZuCo/task*
+temp.txt
+**/stanfordsentiment/*.json

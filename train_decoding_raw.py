@@ -31,6 +31,8 @@ logging.set_verbosity_error()
 torch.autograd.set_detect_anomaly(True)
 
 from torch.utils.tensorboard import SummaryWriter
+os.makedirs('./checkpoints/decoding_raw/last/', exist_ok=True)
+os.makedirs('./checkpoints/decoding_raw/best/', exist_ok=True)
 LOG_DIR = "runs_h"
 train_writer = SummaryWriter(os.path.join(LOG_DIR, "train"))
 val_writer = SummaryWriter(os.path.join(LOG_DIR, "train_full"))

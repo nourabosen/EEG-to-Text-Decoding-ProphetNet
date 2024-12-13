@@ -107,7 +107,7 @@ class BrainTranslator(nn.Module):
         brain_embedding = self.brain_projection(brain_embedding)
 
         if stepone==True:
-            words_embedding = self.bart.model.encoder.embed_tokens(word_contents_batch)
+            words_embedding = self.bart.prophetnet.encoder.word_embeddings(word_contents_batch)
             loss = nn.MSELoss()
             return loss(brain_embedding, words_embedding)
         else:
