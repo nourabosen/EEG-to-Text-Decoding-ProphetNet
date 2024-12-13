@@ -1,0 +1,12 @@
+bert_score
+fuzzy_match
+h5py
+langchain
+matplotlib
+nltk
+numpy
+rouge
+scipy
+torch==2.1.2+cu121
+tqdm
+transformers

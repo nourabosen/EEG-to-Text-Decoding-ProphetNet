@@ -51,6 +51,9 @@ This repo is based on the [EEG-to-Text](https://github.com/MikeWangWZHL/EEG-To-T
 unzip and move all `.mat` files to `/dataset/ZuCo/task1-SR/Matlab_files`,`/dataset/ZuCo/task2-NR/Matlab_files`,`/dataset/ZuCo/task3-TSR/Matlab_files` respectively.
 - Download ZuCo v2.0 'Matlab files' for 'task1-NR' from https://osf.io/2urht/files/ under 'OSF Storage' root, unzip and move all `.mat` files to `/dataset/ZuCo/task2-NR-2.0/Matlab_files`.
 
+### Install dependencies
+run `pip install -r requirements.txt`
+
 ### Preprocess datasets
 run `bash ./scripts/prepare_dataset_raw.sh` to preprocess `.mat` files and prepare sentiment labels. 
 
