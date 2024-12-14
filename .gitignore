@@ -6,3 +6,4 @@ results_raw/
 **/ZuCo/task*
 temp.txt
 **/stanfordsentiment/*.json
+runs_h/
