@@ -9,4 +9,5 @@ rouge
 scipy
 tqdm
 transformers
+langchain-community
 #torch==2.1.2+cu121
