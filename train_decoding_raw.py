@@ -403,7 +403,7 @@ if __name__ == '__main__':
 
     if skip_step_one:
         if load_step1_checkpoint:
-            stepone_checkpoint = 'path_to_step_1_checkpoint.pt'
+            stepone_checkpoint = load_step1_checkpoint
             print(f'skip step one, load checkpoint: {stepone_checkpoint}')
             model.load_state_dict(torch.load(stepone_checkpoint))
         else:

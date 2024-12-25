@@ -24,8 +24,7 @@ def get_config(case):
         parser.add_argument('-pre', '--pretrained', dest='use_random_init', action='store_false')
         parser.add_argument('-rand', '--rand_init', dest='use_random_init', action='store_true')
         
-        parser.add_argument('-load1', '--load_step1_checkpoint', dest='load_step1_checkpoint', action='store_true')
-        parser.add_argument('-no-load1', '--not_load_step1_checkpoint', dest='load_step1_checkpoint', action='store_false')
+        parser.add_argument('-load1', '--load_step1_checkpoint', help='step 1 checkpoint path to load', default = '', required=False)
 
         parser.add_argument('-ne1', '--num_epoch_step1', type = int, help='num_epoch_step1', default = 20, required=True)
         parser.add_argument('-ne2', '--num_epoch_step2', type = int, help='num_epoch_step2', default = 30, required=True)
