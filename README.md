@@ -8,9 +8,12 @@
 </div>
 
 <div align="center">    
-[Paper](https://img.shields.io/badge/arXiv-2502.17465-B31B1B.svg)](https://arxiv.org/abs/2502.17465)
-[DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2502.17465-blue.svg)](https://doi.org/10.48550/arXiv.2502.17465)
+
+[![Paper](https://img.shields.io/badge/arXiv-2502.17465-B31B1B.svg)](https://arxiv.org/abs/2502.17465)  
+[![DOI](https://img.shields.io/badge/DOI-10.48550/arXiv.2502.17465-blue.svg)](https://doi.org/10.48550/arXiv.2502.17465)
+
 </div>
+
 
 ---
 
