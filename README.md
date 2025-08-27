@@ -52,4 +52,4 @@ bash ./scripts/eval_decoding_raw.sh
 ---
 
 ## Acknowledgments
-This work builds on [EEG-to-Text](https://github.com/MikeWangWZHL/EEG-To-Text).
+This work builds on [EEG-to-Text-Decoding](https://github.com/hamzaamrani/EEG-to-Text-Decoding).
