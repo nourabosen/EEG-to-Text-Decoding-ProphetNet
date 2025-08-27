@@ -15,8 +15,6 @@
 </div>
 
 
----
-
 ## Overview
 This repository contains the **ProphetNet-based implementation** from our paper  
 **[Bridging Brain Signals and Language: A Deep Learning Approach to EEG-to-Text Decoding](https://arxiv.org/abs/2502.17465)**.  
@@ -24,7 +22,6 @@ This repository contains the **ProphetNet-based implementation** from our paper
 Our framework integrates **subject-specific representation learning** with **language models** to decode EEG into open-vocabulary text.  
 This repo focuses **only on the ProphetNet model**, one of the proposed decoding architectures.
 
----
 
 ## Setup
 ### 1. Install dependencies
@@ -49,7 +46,6 @@ bash ./scripts/train_decoding_raw.sh
 bash ./scripts/eval_decoding_raw.sh
 ```
 
----
 
 ## Acknowledgments
 This work builds on [EEG-to-Text-Decoding](https://github.com/hamzaamrani/EEG-to-Text-Decoding).
